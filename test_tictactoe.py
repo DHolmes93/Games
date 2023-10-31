@@ -15,7 +15,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_top_left_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if top left cell has value and put token in cell
+        board = [["X", None, None], [None, None, None], [None, None, None]] # Check if top left cell has value and put token in cell
         result = tictactoe.do_top_left(board, token)
         self.assertTrue(result)
         self.assertEqual(board[0][0], "X")
@@ -37,7 +37,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_top_middle_cell_has_value(self):
         token = "O"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if top middle cell has value
+        board = [[None, "O", None], [None, None, None], [None, None, None]] # Check if top middle cell has value
         result = tictactoe.do_top_middle(board, token)
         self.assertTrue(result)
         self.assertEqual(board[0][1], "O")
@@ -58,7 +58,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_top_right_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if top right cell has value
+        board = [[None, None, "X"], [None, None, None], [None, None, None]] # Check if top right cell has value
         result = tictactoe.do_top_right(board, token)
         self.assertTrue(result)
         self.assertEqual(board[0][2], "X")
@@ -94,7 +94,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_center_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if center cell has value
+        board = [[None, None, None], [None, "X", None], [None, None, None]] # Check if center cell has value
         result = tictactoe.do_center(board, token)
         self.assertTrue(result)
         self.assertEqual(board[1][1], "X")
@@ -115,7 +115,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_middle_right_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if middle right cell has token
+        board = [[None, None, None], [None, None, "X"], [None, None, None]] # Check if middle right cell has token
         result = tictactoe.do_middle_right(board, token)
         self.assertTrue(result)
         self.assertEqual(board[1][2], "X")
@@ -136,7 +136,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_bottom_left_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if bottom left cell has value
+        board = [[None, None, None], [None, None, None], ["X", None, None]] # Check if bottom left cell has value
         result = tictactoe.do_bottom_left(board, token)
         self.assertTrue(result)
         self.assertEqual(board[2][0], "X")
@@ -157,7 +157,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_bottom_middle_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if bottom middle cell has token
+        board = [[None, None, None], [None, None, None], [None, "X", None]] # Check if bottom middle cell has token
         result = tictactoe.do_bottom_middle(board, token)
         self.assertTrue(result)
         self.assertEqual(board[2][1], "X")
@@ -179,7 +179,7 @@ class TicTacToeTestCase(unittest.TestCase):
 
     def test_do_bottom_right_cell_has_value(self):
         token = "X"
-        board = [[None, None, None], [None, None, None], [None, None, None]] # Check if bottom right cell has token
+        board = [[None, None, None], [None, None, None], [None, None, "X"]] # Check if bottom right cell has token
         result = tictactoe.do_bottom_right(board, token)
         self.assertTrue(result)
         self.assertEqual(board[2][2], "X")
